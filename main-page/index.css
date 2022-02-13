@@ -21,7 +21,9 @@ time, mark, audio, video {
 * {
     box-sizing: border-box;
   }
-
+body, html {
+    height: 100%;
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -42,6 +44,7 @@ a {
 .header {
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .header_container {
@@ -94,17 +97,14 @@ a {
 
 .header_nav ul li > ul {
     display: none;
-    flex-direction: column;  
+    flex-direction: column; 
+    width: 200px; 
 }
        
 .header_nav ul li > ul li{
     width:100%;   
     background: #701b80;
     height: auto;         
-}
-
-.header_nav ul li > ul {  
-    width: 200px;  
 }
 
 .header_nav ul li> ul li a { 
@@ -132,3 +132,17 @@ a {
     content:"+";
     padding-left:5px;     
   }
+section {
+    height: 100%;
+}
+
+.container.main-img {  
+    background-image: url("../img/main.jpg");   
+    background-size: cover;    
+    background-position: center; 
+    height:80vh;   
+    width: 100%;    
+    background-attachment:fixed;   
+    background-repeat: no-repeat;   
+    background-color: #dfb4e6;   
+}
