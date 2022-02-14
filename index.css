@@ -234,7 +234,7 @@ section {
     background-image: url("img/main.jpg");   
     background-size: cover;    
     background-position: center; 
-    height:80vh;   
+    height:400px;   
     width: 100%;    
     background-attachment:fixed;   
     background-repeat: no-repeat;   

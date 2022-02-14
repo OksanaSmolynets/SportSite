@@ -4,10 +4,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container.main-img {
-        height: 60vh !important;        
-        background-attachment: unset;  
-    }  
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -32,10 +29,7 @@
     section {
         margin-top: 0;
     }
-    .container.main-img {
-        height: 600px;       
-    }
-  
+     
     .header_container {
         padding: 0;
     }
