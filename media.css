@@ -3,26 +3,38 @@
 
 }
 
-
 @media only screen and (max-width: 600px) {
     .container.main-img {
         height: 60vh !important;        
         background-attachment: unset;  
-    }
+    }  
 }
-
 
 @media only screen and (max-width: 768px) {
-
+    .tennis-about img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .players-item {       
+        width: 100%; 
+        margin: 0 0 10px 0;
+    }
+    .tennis-about_content {
+        padding: 10px 20px;
+      
+    }
 }
-
 
 @media only screen and (max-width: 992px) {
     .container.main-img {
         height: 180vh; 
         background-size: contain;         
     }
-}
+    .header_container {
+        justify-content: center;
+    }
+   }
 
 
 @media only screen and (min-width: 1200px) {
