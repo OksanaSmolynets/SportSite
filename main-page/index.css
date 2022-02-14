@@ -33,6 +33,7 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:rgb(221, 220, 220);
     color: rgb(105, 84, 105);
+    position: relative;
 }
 ol, ul {
 	list-style: none;
@@ -62,10 +63,16 @@ img {
     flex-wrap: wrap-reverse;
     padding: 0 40px;  
     border-bottom: 2px solid rgb(105, 84, 105); 
+    -webkit-animation-name: main-animation;
+    animation-name: main-animation;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .header_nav li.active {
-background: rgb(105, 84, 105);
+    background: rgb(105, 84, 105);
 }
 
 .header_nav li.active a {
@@ -97,26 +104,93 @@ background: rgb(105, 84, 105);
    box-shadow: 2px -36px 29px -15px rgba(255,255,255,0.29) inset;
    -webkit-box-shadow: 2px -36px 29px -15px rgba(255,255,255,0.29) inset;
    -moz-box-shadow: 2px -36px 29px -15px rgba(255,255,255,0.29) inset;
+  
 }
 
 .header_nav ul li:hover a {
-    color: white;      
+    color: white;    
+    -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: hover-menu-animation;
+  animation-name: hover-menu-animation;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
+@-webkit-keyframes hover-menu-animation {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    }
+    40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    }
+    60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    }
+    }
+    @keyframes hover-menu-animation {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    }
+    40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    }
+    60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    }
+    } 
+  ×
+
 .header_logo {
-    padding-top: 3px ;
+    padding-top: 3px ; 
 }
 
 .header_logo img {
     object-fit: cover;
     width: 50px;
-    height: 50px;
+    height: 50px;   
 }
 
 .header_nav ul li > ul {
     display: none;
     flex-direction: column; 
-    width: 200px; 
+    width: 200px;     
 }
        
 .header_nav ul li > ul li{
@@ -149,13 +223,15 @@ background: rgb(105, 84, 105);
 .sub-menu > a:after{
     content:"+";
     padding-left:5px;     
-  }
-
-section {
-    z-index: 100;
 }
 
-.container.main-img {  
+section {
+    z-index: 100;  
+    top: 60px;
+    margin-top: 60px;
+}
+
+.main-img {  
     background-image: url("../img/main.jpg");   
     background-size: cover;    
     background-position: center; 
@@ -163,8 +239,71 @@ section {
     width: 100%;    
     background-attachment:fixed;   
     background-repeat: no-repeat;   
-    background-color: rgb(221, 220, 220);   
+    background-color: rgb(221, 220, 220);      
+    -webkit-animation-name: main-animation;
+    animation-name: main-animation;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
+
+    @-webkit-keyframes main-animation {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    }
+    @keyframes main-animation {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    } 
+
+.container.main-img h1 {
+    position: absolute;   
+    font-size: 8vw;
+    text-align: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 100%;
+}
+
+h1 span{
+    transition: 3s linear;
+  }
+
+  h1 span:nth-child(1){
+    margin-right: 5px
+  }
+
+  h1 span:nth-child(1):after{
+    content: " ";
+  }
+
+  h1 span:nth-child(2){
+    margin-left: 30px
+  }
+
+  h1 span{
+    color: rgb(213, 228, 12);
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
 
 .tennis-about {
     display: flex;
@@ -173,6 +312,12 @@ section {
     align-items: center;
     padding: 10px;
     margin: 10px;
+    -webkit-animation-name: main-animation;
+    animation-name: main-animation;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .tennis-about_content {
@@ -221,6 +366,7 @@ section {
     background-color:rgb(105, 84, 105) ;
     margin: 0;
 }
+
 .tennis-about.players .tennis-about_title{
     color: white;
 }
@@ -228,9 +374,9 @@ section {
 .tennis-about img {
     width: 300px;
     height: 200px;
-}
+}  
 
 .footer {
     text-align: center;    
-    padding: 30px;
+    padding: 30px;   
 }
