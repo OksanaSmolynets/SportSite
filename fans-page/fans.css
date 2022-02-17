@@ -1,0 +1,68 @@
+.fans {
+    margin: 80px 16vw;    
+    line-height: 2;
+    overflow: auto;  
+    -webkit-animation-name: main-animation;
+    animation-name: main-animation;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fans h1 {
+    text-align: center;
+}
+
+.article-fans p {
+    font-size: 1.2vw;
+    padding: 10px 0;
+}
+.article-fans hr {
+    height: 3px;
+    background: rgb(105, 84, 105);
+}
+
+.article-fan-info {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.article-fan-info p:last-child {
+    font-weight: bold;
+}
+
+.fans-message-container {
+    display: flex;
+    justify-content: flex-start;
+    text-align:left;
+    align-items: flex-end;   
+    margin-top: 50px;
+}
+.fans-message-container button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(105, 84, 105);
+    color: white;
+    margin-left:20px;
+    -webkit-box-shadow: inset -1px 3px 8px 5px white, 2px 5px 16px 0px rgb(105, 84, 105); 
+    box-shadow: inset -1px 3px 8px 5px white, 2px 5px 16px 0px rgb(105, 84, 105);
+    border-radius: 6px;
+    border: 2px solid white;
+}
+.fans-message-container button:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px white, 5px 5px 15px 5px rgb(105, 84, 105); 
+    box-shadow: 0px 10px 13px -7px white, 5px 5px 15px 5px rgb(105, 84, 105);
+    border-color: rgb(105, 84, 105);
+}
+
+#fans-message {
+    width: 50%;
+    height: 200px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid rgb(105, 84, 105);
+    color: rgb(105, 84, 105);
+}

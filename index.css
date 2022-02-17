@@ -379,7 +379,7 @@ h1 span{
     text-align: center;    
     padding: 30px; 
     bottom: 0;
-    position: sticky;
+    /* position: sticky; */
     background: rgb(221, 220, 220);
     top: 90%;
     border-top: 2px solid rgb(105, 84, 105);
