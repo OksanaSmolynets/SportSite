@@ -38,6 +38,7 @@
                         <li class="active"><a href="fans.html">Fans</a></li>
                         <li><a href="../contacts-page/contacts.html">Contacts</a></li>
                         <li><a href="../admin-page/admin.html">Admin</a></li>
+                        <li><a href="../DOMTask/dom.html">DOM Tasks</a></li>
                     </ul>
                 </nav>
             </div>
@@ -67,10 +68,8 @@
             <hr>
         </article>
         <div class='container fans-message-container'>
-            <textarea id="fans-message" name="fans-message" placeholder="Write an appeal">
-                Write an appeal...
-                </textarea>
-            <button>Send</button>
+            <textarea id="fans-message" name="fans-message" placeholder="Write an appeal" maxlength="300"></textarea>
+            <button id='Send'>Send</button>
         </div>
 
     </section>
@@ -80,5 +79,6 @@
         </div>
     </footer>
 </body>
+<script src='./fans.js'></script>
 
 </html>
