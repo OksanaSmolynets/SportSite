@@ -66,3 +66,8 @@
     border: 2px solid rgb(105, 84, 105);
     color: rgb(105, 84, 105);
 }
+
+.ErrorForm {
+    color: red;
+    display: none;
+}
